@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> 
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 480px 480px 480px;
+            grid-template-rows: auto auto auto;
+            gap: 30px;
+            
+        }
+        .grid-item{
+            background-color: white;
+            padding: 5px;
+            
+        }
+        h1{
+          background-color:goldenrod;
+        }
+       </style>
+
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+
+</head>
+
+<body>
+  <div class="container-fluid" style="background-color:rgb(210, 209, 209);">
+    <!-- <div class="row">
+        <div class="col-xs-3 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+        <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+    </div> -->
+    
+      <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+                <h1><font color="white">Eventive</font></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+              <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'event:event_homead' %}">Home </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'event:event_aboutad' %}">About</a>
+                    </li>
+                    
+                    
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                 
+                  
+                </div>
+                
+              </nav>
+        </div>
+
+
+        <table width="100%"  cellspacing="0" cellpadding="1px" id="t1" align="center" >
+            <tr>
+              <td>
+    <div class="about-section" align="center">
+        <h1 style="background-color:#474e5d ;"> <font face="times new roman"> About Us</font> </h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      </div>
+      <br><br><br><br>
+      <h2 style="text-align:center">Our Team</h2>
+      <br><br>
+      <div class="row" align="center">
+        <div class="column">
+          <div class="card">
+            
+            <div class="container">
+              <h2>shansila</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>bnbxbx@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" style="height: 500px;">
+            <div class="card">
+              
+              <div class="container">
+                <h2>fgfxhsaxvhj</h2>
+                <p class="title">Art Director</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>mike@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              
+              <div class="container">
+                <h2>ghxhjgxjsahxj</h2>
+                <p class="title">Designer</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>bxajb@example.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          
+           
+    </div>
+    <footer class="page-footer font-small blue" align="center">
+    
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="/"> shansilapp@gmail.com</a>
+      </div>
+      <!-- Copyright -->
+    
+    </footer>
+  </td>
+</tr>
+
+</table>
+
+                
+</body>
+</html>

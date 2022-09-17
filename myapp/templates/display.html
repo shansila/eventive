@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+           <th>username</th>
+           <th>email</th>
+           
+           <th>password</th>
+           
+           <th>phone number</th>
+           <th>gender</th>
+           <th>delete</th>
+           <th>update</th>
+        </tr>
+        {% for event in eventive %}
+        <tr>
+            <td>{{event.Username}}</td>
+            <td>{{event.Email}}</td>
+           
+            <td>{{event.Password}}</td>
+            <td>{{event.Phonenumber}}</td>
+            <td>{{event.Gender}}</td>
+            
+            <td><a href="{% url 'user_delete' event.id %}">delete</a></td>
+            <td><a href="{% url 'user_update' event.id %}">update</a></td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>

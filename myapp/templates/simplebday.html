@@ -1,0 +1,201 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/birthday1.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .grid-container{
+          display: grid;
+          grid-template-columns: 500px 700px 200px;
+          grid-template-rows: auto auto auto;
+          gap: 30px;
+          
+      }
+      .grid-item{
+          background-color: white;
+          padding: 5px;
+          
+      }
+      h1{
+        background-color:goldenrod;
+      }
+      
+    </style>
+      
+    
+
+</head>
+<body>
+    
+    <div class="container-fluid" style="background-color:white;">
+    <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+                <h1><font color="white">Eventive</font></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+              <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'user:user_userhome' %}">Home </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'user:user_about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'user:user_contact' %}">Contact</a>
+                    </li>
+                    
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                     <a class="nav-link" href="{% url 'user:user_cart' %}">Select</a>
+                    </li>
+                    </ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'user:user_home' %}">logout</a>
+                    </li>
+                </div>
+                
+              </nav>
+        </div>
+    </div>
+    <br>
+     <div>
+    <h2 align="center" style="background-color:rgb(163, 67, 120) ;"><font size="7" color="white" > Birthday Experiances</font></h2>
+    <br>
+                <table >
+                  <tr>
+                <div class="grid-container">
+                  <div class="grid-item"><img src="{% static 'images/s1.jpg' %}" width="490px" height="500px"></div>
+                  <div class="grid-item">
+                    <h1> <font color="white"> Simple Birthday Decor ₹1999</font></h1>
+                    
+                    <h2>Description</h2>
+                    <p>Our simple birthday decor comprises a decor of delicately beautifying the room with a Ring Backdrop, balloon decoration, and other decorations to create a happy environment for your celebration.</p>
+                    <h2>Details</h2>
+                    <p>☆ Mixed Colours</p>
+                    <p>☆ Floor Type Recommended are Plain Grass</p>
+                    <p>☆ Balloon archMessage on the backdropClusters around room</p>
+                    <div class="container" align="center">
+                      <p>
+                        <button type="button" 
+                            class="btn btn-default btn-sm"  style="background-color:black ;">
+                            
+                            <font color="white"> Select </font>
+                        </button>
+                        <button type="button" 
+                            class="btn btn-default btn-sm"  style="background-color:black ;">
+                            
+                            <font color="white"> Wishlist</font>
+                        </button>
+                    </p>
+                                
+                                
+                       
+                    </div>
+                </div> 
+                    
+                  
+                </div>
+
+                </tr>
+              
+                
+    </div>  
+    
+
+
+
+  <tr>
+<div class="grid-container">
+  <div class="grid-item"><img src="{% static 'images/s2.jpg' %}" width="490px" height="500px"></div>
+  <div class="grid-item">
+    <h1> <font color="white"> Themed Birthday Decor ₹2999</font></h1>
+    
+    <h2>Description</h2>
+    <p>To enhance the aesthetics and add a fun aspect to the venue, add this stunning decor to your cart.</p>
+    <h2>Details</h2>
+    <p>☆ Artificial Flower Bunch </p>
+    <p>☆ Balloon Garland</p>
+    <div class="container" align="center">
+        <p>
+          <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Select </font>
+      </button>
+      <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Wishlist</font>
+      </button>
+        </p>
+    </div>
+
+
+<tr>
+  <div class="grid-container">
+    <div class="grid-item"><img src="{% static 'images/s3.jpg' %}" width="490px" height="500px"></div>
+    <div class="grid-item">
+      <h1> <font color="white"> Royal Birthday Decor ₹3999</font></h1>
+      
+      <h2>Description</h2>
+      <p> Featuring showstoppers such as flowing white linens and ornate gold decor, this first birthday celebration is royal to its core!</p>
+      <h2>Details</h2>
+      <p>☆ Mixed Colours</p>
+      <p>☆ Elegant Gold Dessert Table</p>
+      <p>☆ Royal Prince Cake</p>
+      <p>☆ Gorgeous Guest Tables with Elegant Blue & Gold Table Settings</p>
+      <div class="container" align="center">
+          <p>
+            <button type="button" 
+            class="btn btn-default btn-sm"  style="background-color:black ;">
+            
+            <font color="white"> Select </font>
+        </button>
+        <button type="button" 
+            class="btn btn-default btn-sm"  style="background-color:black ;">
+            
+            <font color="white"> Wishlist</font>
+        </button>
+          </p>
+      </div>
+  </div> 
+      
+    
+  </div>
+  
+  </tr>
+  
+  
+  </div>  
+</table>
+
+
+<footer class="page-footer font-small blue">
+    
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+    <a href="/"> shansilapp@gmail.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+    
+    
+</body>
+</html>

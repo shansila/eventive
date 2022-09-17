@@ -1,0 +1,15 @@
+.grid-container{
+            display: grid;
+            grid-template-columns: 480px 480px 480px;
+            grid-template-rows: auto auto auto;
+            gap: 30px;
+            
+        }
+        .grid-item{
+            background-color: white;
+            padding: 5px;
+            
+        }
+        h1{
+          background-color:goldenrod;
+        }

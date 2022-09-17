@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Form</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> 
+  <style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: 600px 480px 480px;
+        grid-template-rows: auto auto auto;
+        gap: 30px;
+        
+    }
+    .grid-item{
+        background-color: rgb(53, 118, 112);
+        padding: 5px;
+        
+    }
+    h1{
+      background-color:goldenrod;
+    }
+   
+  
+  
+    h2{
+background-color: #303210;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.container{
+width: 900px;
+height: 610px;
+margin:35px auto;
+font-family: 'Raleway', sans-serif;
+}
+div.main{
+width: 300px;
+padding: 10px 50px 25px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top:50px;
+}
+input[type=text],input[type=password]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: #a1cbcc;
+font-size: 16px;
+border-radius: 5px;
+}
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.note{
+color:red;
+}
+.valid{
+color:green;
+}
+.back{
+text-decoration: none;
+border: 1px solid rgb(0, 143, 255);
+background-color: rgb(0, 214, 255);
+padding: 3px 20px;
+border-radius: 2px;
+color: black;
+}
+input[type=button]{
+font-size: 16px;
+background: linear-gradient(#a0afb4 5%, #1860e4 100%);
+border: 1px solid #e5a900;
+color: #4E4D4B;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover{
+background: linear-gradient(#051010 5%, #e7eaeb 100%);
+}
+table,tr,td{
+  background-color:rgb(247, 247, 250) ;
+    border: 1px solid;
+    
+}
+  </style>
+    
+   
+  </head>
+
+	<body>
+    <div class="container-fluid" >
+      <!-- <div class="row">
+          <div class="col-xs-3 col-sm-6 col-md-6 col-lg-6">
+  
+          </div>
+          <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6">
+  
+          </div>
+      </div> -->
+      
+        <div class="row" >
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+                  <h1><font color="white">Eventive</font></h1>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                
+                <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'user:user_home' %}">Home </a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user:user_about' %}">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user:user_contact' %}">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user:user_signup' %}">sign up</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user:user_login' %}">log in</a>
+                      </li>
+                      
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                   
+                    
+                  </div>
+                  
+                </nav>
+          </div>
+  
+  
+          <table width="100%"  cellspacing="0" cellpadding="1px" id="t1" align="center">
+        
+           
+              <tr >
+                <td >
+                  <div class="container" style="width: 20%; ">
+                    
+                    <div class="main" style="background-color:#555  ;">
+                      <h1 style="background-color:#555"  align="center"><font size="7" color="white" face="times new roman"> Login</font></h1>
+                    <br>
+                      <form id="form_id" method="post" name="myform" style="height: 60%; " >
+                        {% csrf_token%}
+                    <label><font color="white">  Username </font></label>
+                    <input type="text" name="username" id="username"/>
+                    <label for="" id="username_error"></label>
+                    <label><font color="white">Password </font></label>
+                    <input type="password" name="password" id="password"/>
+                    <label for="" id="password_error"></label>
+                    <button type="submit" onclick=" return validate()">
+                  Login</button>
+               
+                  </form>
+                
+                    </div>
+                    </div>
+<script>
+  var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+
+  const username =document.getElementById("username");
+  const password =document.getElementById("password");
+  function validate(){
+    if (username.value.length<2 || username.value.length>20) {  
+            alert("please enter your username");  
+            username.focus();  
+            return false;  
+        }  
+        if (password.value.length<=0) {
+            alert("Password is required");
+            password.focus();
+            return false;
+          }
+
+  }
+
+</script>
+	
+  <footer class="page-footer font-small blue">
+    
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="/"> shansilapp@gmail.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</td>
+</tr>
+
+</table>
+
+
+    <script>
+     
+	
+    </script>
+  </body>
+  </html>

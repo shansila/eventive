@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/wedding.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .grid-container{
+          display: grid;
+          grid-template-columns: 500px 700px 200px;
+          grid-template-rows: auto auto auto;
+          gap: 30px;
+          
+      }
+      .grid-item{
+          background-color: white;
+          padding: 5px;
+          
+      }
+      h1{
+        background-color:goldenrod;
+      }
+      
+    </style>
+      
+    
+
+</head>
+<body>
+    
+    <div class="container-fluid" style="background-color:white;">
+    <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+                <h1><font color="white">Eventive</font></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'event:event_homead' %}">Home</a>
+                            </li>
+                 
+                          
+              
+               
+                  
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'event:event_profilead' %}">My Account <img src="{% static 'images/profile.jpg' %}" alt="" width="20px" height="20px"></a>
+                  </li>
+                </div>
+                
+              </nav>
+        </div>
+    </div>
+    <br>
+     <div>
+    <h2 align="center" style="background-color:rgb(163, 67, 120) ;"><font size="7" color="white" > wedding Experiances</font></h2>
+    <br>
+                <table >
+                  <tr>
+                <div class="grid-container">
+                  <div class="grid-item"><img src="{% static 'images/w1.jpg' %}" width="490px" height="500px"></div>
+                  <div class="grid-item">
+                    <h1> <font color="white"> Simple wedding stage Decor ₹5000</font></h1>
+                    <br>
+                    <h2>Description</h2>
+                    <p>☆ If you are looking for a super simple stage backdrop, just add tons of drapes in an ivory or pastel shade, throw in a couple of chandeliers and a handful of flowers!</p>
+                   
+                    <p>☆ You can also use this stage decor for an evening or night-time function. Simply add filament lights or small bulbs hanging from the wreath! A small addition that takes this decor element from day to night!</p>
+                    <br><br><br>
+                    <div class="container" align="center">
+                        <p>
+                          <button type="button" 
+                          class="btn btn-default btn-sm"  style="background-color:black ;">
+                          
+                          <font color="white"> Select </font>
+                      </button>
+                      <button type="button" 
+                          class="btn btn-default btn-sm"  style="background-color:black ;">
+                          
+                          <font color="white"> Wishlist</font>
+                      </button>
+                        </p>
+                    </div>
+                </div> 
+                    
+                  
+                </div>
+
+                </tr>
+              
+                
+    </div>  
+    
+
+
+
+  <tr>
+<div class="grid-container">
+  <div class="grid-item"><img src="{% static 'images/w2.jpg' %}" width="490px" height="500px"></div>
+  <div class="grid-item">
+    <h1> <font color="white">Elegant stage Decor ₹8000</font></h1>
+    <br>
+    <h2>Description</h2>
+    <p>☆ This indoor wedding stage looks beautiful with the gold accents. Its a simple set up, really. But it is a perfect for an Indoor wedding or Reception party! It will most definitely make for some gorgeous photos.</p>
+
+    <p>☆ While most stages are built “covering up” the existing backdrop structure, this one incorporated the stunning pillars of the Lalit Mahal into the decor! The structure was enhanced with drapes and chandeliers.</p>
+    <br><br>
+    <div class="container" align="center">
+        <p>
+          <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Select </font>
+      </button>
+      <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Wishlist</font>
+      </button>
+        </p>
+    </div>
+</div> 
+    
+  
+</div>
+
+</tr>
+
+
+</div>  
+
+
+<tr>
+  <div class="grid-container">
+    <div class="grid-item"><img src="{% static 'images/w3.jpg' %}" width="490px" height="500px"></div>
+    <div class="grid-item">
+      <h1> <font color="white"> Royal and Rich Decor ₹10,000</font></h1>
+      <br>
+      <h2>Description</h2>
+      
+      <p>☆ A floral wall framed by a curtain of golden bells, and a gota patti ceiling?! This wedding stage decor is absolutely stunning!   and it looks just as good in real life! Again, note the extra chairs. They’re always a good idea!</p>
+      
+      <p>☆ While most of these designs are ideal for the Wedding Function and Reception Party, there are some designs that are perfect for smaller functions</p>
+      <br><br><br>
+      <div class="container" align="center">
+        <p>
+          <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Select </font>
+      </button>
+      <button type="button" 
+          class="btn btn-default btn-sm"  style="background-color:black ;">
+          
+          <font color="white"> Wishlist</font>
+      </button>
+      </p>
+      </div>
+  </div> 
+      
+    
+  </div>
+  
+  </tr>
+  
+  
+  </div>  
+</table>
+<footer class="page-footer font-small blue">
+    
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="/"> shansilapp@gmail.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> 
+
+</body>
+</html>
